@@ -49,10 +49,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(211)))), ((int)(((byte)(232)))), ((int)(((byte)(208)))));
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Londrina Solid", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(16, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 37);
+            this.label1.Size = new System.Drawing.Size(199, 37);
             this.label1.TabIndex = 0;
             this.label1.Text = "Inicio de sesión";
             // 
@@ -78,12 +78,14 @@
             // textBox1
             // 
             this.textBox1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.textBox1.Font = new System.Drawing.Font("Sniglet", 7.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
             this.textBox1.Location = new System.Drawing.Point(382, 346);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(302, 26);
+            this.textBox1.Size = new System.Drawing.Size(302, 27);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Usuario";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.Enter += new System.EventHandler(this.textBox1_Enter);
             this.textBox1.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
@@ -99,10 +101,11 @@
             // textBox2
             // 
             this.textBox2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.textBox2.Font = new System.Drawing.Font("Sniglet", 7.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox2.ForeColor = System.Drawing.Color.White;
             this.textBox2.Location = new System.Drawing.Point(382, 409);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(302, 26);
+            this.textBox2.Size = new System.Drawing.Size(302, 27);
             this.textBox2.TabIndex = 3;
             this.textBox2.Text = "Contraseña";
             this.textBox2.Enter += new System.EventHandler(this.textBox2_Enter);
@@ -140,6 +143,7 @@
             // comboBox1
             // 
             this.comboBox1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.comboBox1.Font = new System.Drawing.Font("Sniglet", 7.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox1.ForeColor = System.Drawing.Color.White;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
