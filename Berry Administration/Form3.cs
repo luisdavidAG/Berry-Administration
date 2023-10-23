@@ -39,7 +39,7 @@ namespace Berry_Administration
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            ///mesaje de autenticacion
+
         }
     }
 }
