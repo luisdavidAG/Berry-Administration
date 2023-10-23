@@ -39,6 +39,7 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -96,7 +97,7 @@
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(158, 20);
             this.label4.TabIndex = 8;
-            this.label4.Text = "Mas sobre el sistema";
+            this.label4.Text = "Más sobre el sistema";
             // 
             // textBox2
             // 
@@ -115,11 +116,12 @@
             // 
             this.button1.BackColor = System.Drawing.Color.LightGray;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Sniglet", 7.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(382, 472);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(304, 45);
             this.button1.TabIndex = 5;
-            this.button1.Text = "Iniciar seción";
+            this.button1.Text = "Iniciar sesión";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -172,7 +174,7 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(179)))), ((int)(((byte)(216)))), ((int)(((byte)(174)))));
             this.pictureBox1.Location = new System.Drawing.Point(354, 78);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
@@ -216,6 +218,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 
