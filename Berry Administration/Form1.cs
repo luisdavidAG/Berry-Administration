@@ -13,7 +13,7 @@ namespace Berry_Administration
 {
     public partial class Form1 : Form
     {
-        static string cadena_conexion = "Server=localhost;user=erikg;password=erikgiovani123;database=berry_db;";
+        static string cadena_conexion = "Server=localhost;user=root;password=tics;database=berry_db;";
         static MySqlConnection conexion = new MySqlConnection(cadena_conexion);
         public Form1()
         {
@@ -26,30 +26,31 @@ namespace Berry_Administration
              
         }
 
-        private void textBox1_Enter(object sender, EventArgs e)
+        /*private void comboBox1_Enter(object sender, EventArgs e)
         {
-            if (textBox1.Text == "Usuario")
+            if (comboBox1.Text == "Tipo de usuario")
             {
-                textBox1.Text = "";
-                textBox1.ForeColor = Color.White;
+                comboBox1.Text = "";
+                comboBox1.ForeColor = C118, 41, 34;
             }
         }
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
-            if (textBox1.Text == "")
+            if (comboBox1.Text == "")
             {
-                textBox1.Text = "Usuario";
-                textBox1.ForeColor = Color.White;
+                comboBox1.Text = "Tipo de usuario";
+                comboBox1.ForeColor = Color.White;
             }
-        }
+        }*/
 
         private void textBox2_Enter(object sender, EventArgs e)
         {
             if (textBox2.Text == "Contraseña")
             {
                 textBox2.Text = "";
-                textBox2.ForeColor = Color.White;
+                textBox2.ForeColor = Color.FromArgb(118, 41, 34);
+
                 if (textBox2.Text != "Contraseña")
                 {
                     textBox2.UseSystemPasswordChar = true;
@@ -62,7 +63,7 @@ namespace Berry_Administration
             if (textBox2.Text == "")
             {
                 textBox2.Text = "Contraseña";
-                textBox2.ForeColor = Color.White;
+                textBox2.ForeColor = Color.FromArgb(118, 41, 34);
 
                 if ( textBox2.Text == "Contraseña")
                 {
@@ -74,7 +75,7 @@ namespace Berry_Administration
         private void button1_Click(object sender, EventArgs e)
         {
             //Verifica si se estan insertando datos
-            if (textBox1.Text != "")
+            if (comboBox1.Text != "")
             {
                 if (textBox2.Text != "")
                 {
@@ -88,7 +89,7 @@ namespace Berry_Administration
             else
             {
              
-                MessageBox.Show("Ingresa un usuario");
+                MessageBox.Show("Selecciona un usuario");
               
             }
         }
@@ -101,7 +102,7 @@ namespace Berry_Administration
 
                 string consulta = "SELECT COUNT(*) FROM usuarios WHERE usuario = @usuario AND contraseña = @contraseña";
                 MySqlCommand comando = new MySqlCommand(consulta, conexion);
-                comando.Parameters.AddWithValue("@usuario", textBox1.Text);
+                comando.Parameters.AddWithValue("@usuario", comboBox1.Text);
                 comando.Parameters.AddWithValue("@contraseña", textBox2.Text);
 
                 int count = Convert.ToInt32(comando.ExecuteScalar());
@@ -117,7 +118,7 @@ namespace Berry_Administration
                     }
                     else
                     {
-                        MessageBox.Show("Contraseña incorrecta");
+                        MessageBox.Show("Usuario incorrecto");
                     }
                 }
                 else
@@ -132,7 +133,7 @@ namespace Berry_Administration
                         }
                         else
                         {
-                            MessageBox.Show("Contraseña incorrecta");
+                            MessageBox.Show("Usuario incorrecto");
                         }
                     }
                     else
@@ -160,7 +161,7 @@ namespace Berry_Administration
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
